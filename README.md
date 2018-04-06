@@ -1,12 +1,12 @@
 # PG Metricus
 
-### INFO
+### Info
 
 pg_metricus is an extension written in C for sending metrics in the socket (Brubeck aggregator, Graphite, etc.) from pl/pgsql code.
 
 If a sending is executed inside a transaction, the metrics will delivered even if the transaction is aborted.
 
-### INSTALLATION
+### Installation
 
 In the directory where you downloaded pg_metricus, run
 
@@ -30,7 +30,7 @@ create schema metricus;
 create extension pg_metricus schema metricus;
 ```
 
-### FORMAT
+### Format
 
 For Brubeck aggregator:
 ```plpgsql
@@ -52,7 +52,7 @@ select metricus.send_metric(format(E'%s.%s %s %s \n',
 ));
 ```
 
-### EXAMPLE
+### Example
 
 ```plpgsql
 do language plpgsql $$
